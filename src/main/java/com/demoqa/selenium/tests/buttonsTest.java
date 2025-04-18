@@ -15,11 +15,12 @@ public class buttonsTest {
 	
 			@Test
 			public void testGoogle() throws InterruptedException {
-				WebDriverManager.chromedriver().setup();
+				WebDriverManager.chromedriver().setup();;
 				WebDriver driver =new ChromeDriver();
 				driver.manage().window().maximize();
 				driver.get("https://www.google.com/");
 				driver.findElement(By.name("q")).sendKeys("https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver/4.29.0", Keys.ENTER);
+				System.out.println( driver.getTitle());
 				System.out.println( driver.getTitle());
 				Thread.sleep(1000);
 				driver.quit();
